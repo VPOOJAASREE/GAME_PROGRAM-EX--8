@@ -1,5 +1,6 @@
-# GAME_PROGRAM-EX--7
-# Create a landscape, add foliage, apply landscape material
+# GAME_PROGRAM-EX--8
+# Landscape Creation and Foliage in Unreal Engine
+
 
 ```
 Name : V. POOJAA SREE
@@ -7,60 +8,41 @@ Reg NO : 212223040147
 
 ```
 
-## AIM
-## To create an AI character in Unreal Engine that roams randomly within a NavMesh area and chases
-the player when they come within a certain range, using Behavior Trees, Blackboard, and AI
-Perception.
-## STEPS
-1. Setup Navigation
-Add a NavMeshBoundsVolume to your level and scale it to cover the roamable area.
-Press P to confirm the green nav area is visible (indicating navigable space).
-2. Create AI Character
-Create a Blueprint character (e.g., BP_AIEnemy ) with a skeletal mesh and AIController class.
-Create an AI Controller Blueprint (e.g., BP_AIController ) and assign it to the character.
-3. Enable AI Perception
-In BP_AIController , add an AIPerception component.
-Configure a Sight sense (set detection range, lose sight range, peripheral vision angle).
-Bind OnPerceptionUpdated to update a blackboard value
-(e.g., CanSeePlayer and PlayerActor ).
-4. Set Up Blackboard
-Create a Blackboard with the following keys:
-TargetLocation (Vector)
-PlayerActor (Object)
-CanSeePlayer (Bool)
-5. Create Behavior Tree (BT_AI)
-Structure it like this:
-AI Random Roam with Chase - Unreal Engine 🎯 Aim
+## Aim
+To create a landscape in Unreal Engine, apply a custom landscape material, and add foliage for realistic environment generation.
+
 ## Procedure
-Root
-Selector
 
-Sequence (Chase Player)
+1. **Create a New Landscape:**
+   - Open your Unreal Engine project.
+   - Go to the **Modes Panel** and select **Landscape**.
+   - Set the desired section size, number of components, and overall resolution.
+   - Click **Create** to generate the landscape.
 
-Blackboard Check: CanSeePlayer == truTask: Find Random Location → TargetLocation
-Move To: TargetLocation
+2. **Apply a Landscape Material:**
+   - In the **Content Browser**, create a new **Material** and name it `M_Landscape`.
+   - Open the material and:
+     - Use **Landscape Layer Blend** to blend textures (e.g., grass, rock, dirt).
+     - Connect appropriate texture samplers to different layers.
+     - Output the final blend to the **Base Color**, **Normal**, and optionally **Roughness** inputs.
+   - Save the material.
+   - Select the landscape in the scene, go to the **Details Panel**, and assign `M_Landscape` to the **Landscape Material** slot.
 
-6. Custom Task: Find Random Location
-Create a new BTTask_BlueprintBase to get a random reachable point using:
-Set the result to the TargetLocation blackboard key.
+3. **Add Foliage:**
+   - Go to the **Foliage Mode** from the **Select Mode dropdown**.
+   - In the **Foliage Panel**, click the **+** icon to add Static Meshes (e.g., trees, grass, bushes).
+   - Adjust settings like **Density**, **Scale**, and **Randomness**.
+   - Use the brush tool to paint foliage onto the landscape.
 
-8. Test the AI
-Add a player character to the level.
-Place the AI enemy in the map and assign its controller and behavior tree.
-Press Play: the AI should roam when the player is far and chase the player when within
-sight.
-UNavigationSystemV1::GetRandomReachablePointInRadius()
 ## Output
 
-<img width="880" height="449" alt="Screenshot 2025-11-13 140948" src="https://github.com/user-attachments/assets/74c416e1-692e-4777-aa0a-f89872e05fc9" />
-<img width="876" height="748" alt="Screenshot 2025-11-13 141029" src="https://github.com/user-attachments/assets/a1abf0ae-586d-42c7-9d23-d7b48f22a148" />
+![Screenshot 2025-05-08 135337](https://github.com/user-attachments/assets/0b523414-9f03-42f5-b94a-20511cc851c6)
 
 
-The AI character roams randomly within a defined area. When the player enters its sight range, the
-AI stops roaming and begins to chase the player until the player is out of sight, after which it
-resumes roaming.
+
+![image](https://github.com/user-attachments/assets/e42a434b-86a3-48d6-a789-f02fb7eea43d)
+
+
 ## Result
-The AI character roams randomly within a defined area. When the player enters its sight range, the
-AI stops roaming and begins to chase the player until the player is out of sight, after which it
-resumes roaming.
+A landscape and Foliage in Unreal Engine was successfully created 
 
