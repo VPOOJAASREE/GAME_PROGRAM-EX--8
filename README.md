@@ -1,4 +1,4 @@
-<img width="1519" height="838" alt="image" src="https://github.com/user-attachments/assets/ceaf2d0a-a105-431a-ae76-83ca75ff0428" /># GAME_PROGRAM-EX--8
+# GAME_PROGRAM-EX--8
 # Landscape Creation and Foliage in Unreal Engine
 
 
@@ -36,16 +36,13 @@ To create a landscape in Unreal Engine, apply a custom landscape material, and a
 
 ## Output
 
-<img width="1540" height="828" alt="image" src="https://github.com/user-attachments/assets/57b3057d-5719-42a6-bf3f-3fe28afd07a9" />
+<img width="1141" height="613" alt="8a" src="https://github.com/user-attachments/assets/9f824bce-b599-42da-84ed-31d0b7877931" />
 
 
-
-<img width="1519" height="838" alt="image" src="https://github.com/user-attachments/assets/fdbd7ef0-865a-407d-9d70-2eb4408e9c25" />
-
-
+<img width="1133" height="627" alt="8b" src="https://github.com/user-attachments/assets/16f91cd1-9ba4-4385-b62b-7d5c3421d0f8" />
 
 
 
 ## Result
-A landscape and Foliage in Unreal Engine was successfully created 
+A landscape and Foliage in Unreal Engine was successfully created.
 
